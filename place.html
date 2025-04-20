@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place</title>
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/185364.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #CFD8DC;
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0077b6;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #0077b6;
+        }
+
+        h2, b {
+            color: #333;
+        }
+
+        select, input[type="text"], button {
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        form {
+            margin-top: 40px;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 320px;
+            transition: transform 0.3s ease;
+        }
+
+        form:hover {
+            transform: translateY(-5px);
+        }
+
+        center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">✈️Travel</div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<center>
+    <form id="directionForm">
+        <b>SELECT STATE</b><br><br>
+        <select name="comfort" required>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+        </select><br><br>
+
+        <label for="from"><b>FROM</b></label><br>
+        <input type="text" id="from" placeholder="Starting location" required /><br><br>
+
+        <label for="toSelect"><b>TO</b></label><br>
+        <select id="toSelect" name="to" required>
+            <option value="">-- Select Destination --</option>
+            <option value="banglore">Bangalore</option>
+            <option value="vizag">Vizag</option>
+            <option value="kerala">Kerala</option>
+            <option value="chennai">Chennai</option>
+            <option value="hyderabad">Hyderabad</option>
+        </select><br><br>
+
+        <label for="days"><b>HOW MANY DAYS TO ENJOY!</b></label><br><br>
+        <select name="days" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option> 
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select><br><br>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+</center>
+
+<script>
+    document.getElementById('directionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const to = document.getElementById('toSelect').value.trim().toLowerCase();
+
+        if (to === 'hyderabad') {
+            window.location.href = 'hyderabad.html';
+        } else if (to === 'banglore' || to === 'bengaluru') {
+            window.location.href = 'banglore.html';
+        } else if (to === 'vizag' || to === 'visakhapatnam') {
+            window.location.href = 'vizag.html';
+        } else if (to === 'kerala') {
+            window.location.href = 'kerala.html';
+        } else if (to === 'chennai') {
+            window.location.href = 'chennai.html';
+        } else {
+            alert('Destination not recognized or not available.');
+        }
+    });
+</script>
+
+</body>
+</html>
