@@ -197,5 +197,15 @@
     <p>&copy; 2025 Travel Guide - Vizag Discovery</p>
 </footer>
 
+
+<script>
+  function showDay(dayNumber) {
+    const days = document.querySelectorAll('.day');
+    days.forEach((day, index) => {
+      day.style.display = (index === dayNumber - 1) ? 'block' : 'none';
+    });
+  }
+</script>
+
 </body>
 </html>
