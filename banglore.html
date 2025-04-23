@@ -1,174 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3-Day Trip Itinerary to Bangalore</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3-Day Trip Itinerary to Bangalore</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        h1 {
-            margin: 0;
-        }
+    nav.day-nav {
+      background-color: #444;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
+    }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
+    nav.day-nav button, nav.day-nav a {
+      margin: 5px 10px;
+      padding: 10px 15px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
 
-        .day {
-            background-color: white;
-            border-radius: 10px;
-            margin: 20px 0;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    nav.day-nav a:hover, nav.day-nav button:hover {
+      background-color: #0056b3;
+    }
 
-        .day h2 {
-            color: #007bff;
-        }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
 
-        .day p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
+    .day {
+      background-color: white;
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        .image-section {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+    .day h2 {
+      color: #007bff;
+    }
 
-        .image-section figure {
-            margin: 10px;
-            text-align: center;
-            width: 30%;
-        }
+    .day p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-        .image-section img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+    .image-section {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 10px;
+      scroll-behavior: smooth;
+    }
 
-        .image-section figcaption {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #555;
-        }
+    .image-section::-webkit-scrollbar {
+      height: 8px;
+    }
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
+    .image-section::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+    }
+
+    .image-section::-webkit-scrollbar-track {
+      background: #eee;
+    }
+
+    .image-section figure {
+      flex: 0 0 auto;
+      width: 250px;
+      text-align: center;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .image-section figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>3-Day Trip Itinerary to Bangalore</h1>
+  <h1>3-Day Trip Itinerary to Bangalore</h1>
 </header>
-    <nav class="day-nav">
+
+<nav class="day-nav">
   <button onclick="showDay(1)">Day 1</button>
   <button onclick="showDay(2)">Day 2</button>
   <button onclick="showDay(3)">Day 3</button>
-  <button onclick="showDay(4)">Day 4</button>
-  <button onclick="showDay(5)">Day 5</button>
-  <button onclick="showDay(6)">Day 6</button>
-  <button onclick="showDay(7)">Day 7</button>
-<button><a href="place.html">Destinations</a> </button>
- <button><a href="home.html">Home</a> </button>
-  
-  
+  <a href="place.html">Destinations</a>
+  <a href="home.html">Home</a>
 </nav>
 
 <div class="container">
 
-    <div class="day">
-        <h2>Day 1: Garden City Exploration</h2>
-        <p><strong>Morning:</strong> Visit Lalbagh Botanical Garden and explore the iconic Glass House.</p>
-        <p><strong>Afternoon:</strong> Head to Cubbon Park and explore the nearby State Central Library.</p>
-        <p><strong>Evening:</strong> Stroll around MG Road and Brigade Road for shopping and snacks.</p>
-        <div class="image-section">
-            <figure>
-                <img src="https://www.holidify.com/images/compressed/attractions/attr_1762.jpg" alt="Lalbagh Garden">
-                <figcaption>Lalbagh - Botanical bliss in the city</figcaption>
-            </figure>
-            <figure>
-                <img src="http://2.bp.blogspot.com/_CFTkyF5GhPs/TPNPUw_Nl_I/AAAAAAAABrc/IaGA4mIVxcc/s1600/P2071095.JPG" alt="Cubbon Park">
-                <figcaption>Cubbon Park - Green heart of Bangalore</figcaption>
-            </figure>
-            <figure>
-                <img src="https://images.nativeplanet.com/img/2023/08/image-of-mg-road-in-bangalore_1692439637183-600x338-20230819155018.jpg" alt="MG Road">
-                <figcaption>MG Road - Shops, lights, and buzz</figcaption>
-            </figure>
-        </div>
+  <div class="day" id="day1">
+    <h2>Day 1: Garden City Exploration</h2>
+    <p><strong>Morning:</strong> Visit Lalbagh Botanical Garden and explore the iconic Glass House.</p>
+    <p><strong>Afternoon:</strong> Head to Cubbon Park and explore the nearby State Central Library.</p>
+    <p><strong>Evening:</strong> Stroll around MG Road and Brigade Road for shopping and snacks.</p>
+    <div class="image-section">
+      <figure>
+        <img src="https://www.holidify.com/images/compressed/attractions/attr_1762.jpg" alt="Lalbagh Garden">
+        <figcaption>Lalbagh - Botanical bliss in the city</figcaption>
+      </figure>
+      <figure>
+        <img src="http://2.bp.blogspot.com/_CFTkyF5GhPs/TPNPUw_Nl_I/AAAAAAAABrc/IaGA4mIVxcc/s1600/P2071095.JPG" alt="Cubbon Park">
+        <figcaption>Cubbon Park - Green heart of Bangalore</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.nativeplanet.com/img/2023/08/image-of-mg-road-in-bangalore_1692439637183-600x338-20230819155018.jpg" alt="MG Road">
+        <figcaption>MG Road - Shops, lights, and buzz</figcaption>
+      </figure>
     </div>
+  </div>
 
-    <div class="day">
-        <h2>Day 2: Culture & History</h2>
-        <p><strong>Morning:</strong> Explore Bangalore Palace with its Tudor-style architecture.</p>
-        <p><strong>Afternoon:</strong> Visit the National Gallery of Modern Art for a dose of creativity.</p>
-        <p><strong>Evening:</strong> Enjoy dinner at Church Street — full of cafes and live music spots.</p>
-        <div class="image-section">
-            <figure>
-                <img src="https://www.bontravelindia.com/wp-content/uploads/2022/08/Karnataka-Bangalore-Palace.jpg" alt="Bangalore Palace">
-                <figcaption>Bangalore Palace - Regal vibes & architecture</figcaption>
-            </figure>
-            <figure>
-                <img src="https://media.architecturaldigest.in/wp-content/uploads/2017/11/DSC2445.jpg" alt="NGMA Bangalore">
-                <figcaption>NGMA - Modern art & tranquility</figcaption>
-            </figure>
-            <figure>
-                <img src="https://i.ytimg.com/vi/5YMJfdiJhe8/maxresdefault.jpg" alt="Church Street">
-                <figcaption>Church Street - Food, art, and fun</figcaption>
-            </figure>
-        </div>
+  <div class="day" id="day2" style="display:none;">
+    <h2>Day 2: Culture & History</h2>
+    <p><strong>Morning:</strong> Explore Bangalore Palace with its Tudor-style architecture.</p>
+    <p><strong>Afternoon:</strong> Visit the National Gallery of Modern Art for a dose of creativity.</p>
+    <p><strong>Evening:</strong> Enjoy dinner at Church Street — full of cafes and live music spots.</p>
+    <div class="image-section">
+      <figure>
+        <img src="https://www.bontravelindia.com/wp-content/uploads/2022/08/Karnataka-Bangalore-Palace.jpg" alt="Bangalore Palace">
+        <figcaption>Bangalore Palace - Regal vibes & architecture</figcaption>
+      </figure>
+      <figure>
+        <img src="https://media.architecturaldigest.in/wp-content/uploads/2017/11/DSC2445.jpg" alt="NGMA Bangalore">
+        <figcaption>NGMA - Modern art & tranquility</figcaption>
+      </figure>
+      <figure>
+        <img src="https://i.ytimg.com/vi/5YMJfdiJhe8/maxresdefault.jpg" alt="Church Street">
+        <figcaption>Church Street - Food, art, and fun</figcaption>
+      </figure>
     </div>
+  </div>
 
-    <div class="day">
-        <h2>Day 3: Day Trip to Nandi Hills</h2>
-        <p><strong>Morning:</strong> Drive early to Nandi Hills to catch the sunrise and enjoy nature trails.</p>
-        <p><strong>Afternoon:</strong> Explore Tipu Sultan's Fort and nearby viewpoints.</p>
-        <p><strong>Evening:</strong> Return to Bangalore and relax at a rooftop cafe before departure.</p>
-        <div class="image-section">
-            <figure>
-                <img src="https://i.pinimg.com/originals/dd/ff/dd/ddffddc8d73d749bbe07f4ddd1d2e0d0.jpg" alt="Nandi Hills Sunrise">
-                <figcaption>Nandi Hills - A sunrise above the clouds</figcaption>
-            </figure>
-            <figure>
-                <img src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_1316/http://res.cloudinary.com/dwzmsvp7f/image/upload/v1571729997/frfkx70qac0av2hlffyo.jpg" alt="Tipu Sultan Fort">
-                <figcaption>Tipu's Fort - A walk through history</figcaption>
-            </figure>
-            <figure>
-                <img src="http://bigpitcher.co.in/indiranagar-best-pub-bangalore/assets/img/service-details/starlounge.jpg" alt="Bangalore Rooftop Cafe">
-                <figcaption>Rooftop Cafe - Chill vibes to end your trip</figcaption>
-            </figure>
-        </div>
+  <div class="day" id="day3" style="display:none;">
+    <h2>Day 3: Day Trip to Nandi Hills</h2>
+    <p><strong>Morning:</strong> Drive early to Nandi Hills to catch the sunrise and enjoy nature trails.</p>
+    <p><strong>Afternoon:</strong> Explore Tipu Sultan's Fort and nearby viewpoints.</p>
+    <p><strong>Evening:</strong> Return to Bangalore and relax at a rooftop cafe before departure.</p>
+    <div class="image-section">
+      <figure>
+        <img src="https://i.pinimg.com/originals/dd/ff/dd/ddffddc8d73d749bbe07f4ddd1d2e0d0.jpg" alt="Nandi Hills Sunrise">
+        <figcaption>Nandi Hills - A sunrise above the clouds</figcaption>
+      </figure>
+      <figure>
+        <img src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto,w_1316/http://res.cloudinary.com/dwzmsvp7f/image/upload/v1571729997/frfkx70qac0av2hlffyo.jpg" alt="Tipu Sultan Fort">
+        <figcaption>Tipu's Fort - A walk through history</figcaption>
+      </figure>
+      <figure>
+        <img src="http://bigpitcher.co.in/indiranagar-best-pub-bangalore/assets/img/service-details/starlounge.jpg" alt="Bangalore Rooftop Cafe">
+        <figcaption>Rooftop Cafe - Chill vibes to end your trip</figcaption>
+      </figure>
     </div>
+  </div>
 
 </div>
 
 <footer>
-    <p>&copy; 2025 Travel Guide - Bangalore Explorer</p>
+  <p>&copy; 2025 Travel Guide - Bangalore Explorer</p>
 </footer>
+
+<script>
+  function showDay(dayNumber) {
+    const days = document.querySelectorAll('.day');
+    days.forEach((day, index) => {
+      day.style.display = (index === dayNumber - 1) ? 'block' : 'none';
+    });
+  }
+</script>
 
 </body>
 </html>
