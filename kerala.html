@@ -297,6 +297,16 @@
 <footer>
     <p>&copy; 2025 Travel Guide - Kerala Exploration</p>
 </footer>
+  
+<script>
+  function showDay(dayNumber) {
+    const days = document.querySelectorAll('.day');
+    days.forEach((day, index) => {
+      day.style.display = (index === dayNumber - 1) ? 'block' : 'none';
+    });
+  }
+  window.onload = () => showDay(1); // Show Day 1 by default
+</script>
 
 </body>
 </html>
