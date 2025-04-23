@@ -1,108 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7-Day Trip Itinerary to Kerala</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7-Day Trip Itinerary from Bhimavaram to Hyderabad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        h1 {
-            margin: 0;
-        }
+    .day-nav {
+      background-color: #eee;
+      text-align: center;
+      padding: 10px 0;
+    }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
+    .day-nav button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      margin: 5px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
 
-        .day {
-            background-color: white;
-            border-radius: 10px;
-            margin: 20px 0;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .day-nav button:hover {
+      background-color: #218838;
+    }
 
-        .day h2 {
-            color: #28a745;
-        }
+    .container {
+      width: 80%;
+      margin: auto;
+    }
 
-        .day p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
+    .day {
+      background-color: white;
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
 
-        .image-section {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+    .day h2 {
+      color: #28a745;
+    }
 
-        .image-section figure {
-            margin: 10px;
-            text-align: center;
-            width: 30%;
-        }
+    .day p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-        .image-section img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+    .image-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
 
-        .image-section figcaption {
-            margin-top: 8px;
-            font-size: 14px;
-            color: #555;
-        }
+    .image-section figure {
+      margin: 10px;
+      text-align: center;
+      width: 350px;
+    }
 
-        .cta-button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            text-decoration: none;
-        }
+    .image-section img {
+      width: 350px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-        .cta-button:hover {
-            background-color: #218838;
-        }
+    .image-section figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+.image-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.day.day-3 .image-section {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
+}
 
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+.day.day-3 .image-section figure {
+  flex: 0 0 auto;
+}
+.day.day-2 .image-section figure {
+  flex: 0 0 auto;
+}
+
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>7-Day Trip Itinerary to Kerala</h1>
+  <h1>7-Day Trip Itinerary from Bhimavaram to Hyderabad</h1>
 </header>
-    <nav class="day-nav">
+
+<nav class="day-nav">
   <button onclick="showDay(1)">Day 1</button>
   <button onclick="showDay(2)">Day 2</button>
   <button onclick="showDay(3)">Day 3</button>
@@ -117,6 +138,7 @@
 </nav>
 
 <div class="container">
+
 
     <div class="day">
         <h2>Day 1: Arrival at Kochi</h2>
