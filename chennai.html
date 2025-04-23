@@ -19,55 +19,27 @@
       text-align: center;
     }
 
-    /* Navbar styles */
-    .navbar {
-      background-color: #333;
-      color: white;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 999;
+    .day-nav {
+      background-color: #eee;
+      text-align: center;
       padding: 10px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      margin: auto;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      margin: 0 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .nav-links a:hover {
-      color: #28a745;
-    }
-
-    .day-buttons button {
+    .day-nav button {
       background-color: #28a745;
       color: white;
       border: none;
-      margin: 4px 3px;
-      padding: 8px 12px;
+      margin: 5px;
+      padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 1em;
     }
 
-    .day-buttons button:hover {
+    .day-nav button:hover {
       background-color: #218838;
     }
 
-    /* Styling for day content */
     .container {
       width: 80%;
       margin: auto;
@@ -116,20 +88,27 @@
       font-size: 14px;
       color: #555;
     }
+.image-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.day.day-3 .image-section {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 15px;
+}
 
-    /* Custom styles for day 3 image section */
-    .day.day-3 .image-section {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 15px;
-    }
+.day.day-3 .image-section figure {
+  flex: 0 0 auto;
+}
+.day.day-2 .image-section figure {
+  flex: 0 0 auto;
+}
 
-    .day.day-3 .image-section figure {
-      flex: 0 0 auto;
-    }
 
-    /* Footer styles */
     footer {
       background-color: #333;
       color: white;
@@ -141,29 +120,25 @@
 <body>
 
 <header>
-  <h1>7-Day Trip Itinerary from Bhimavaram to Chennai</h1>
+  <h1>7-Day Trip Itinerary from Bhimavaram to Hyderabad</h1>
 </header>
 
-<!-- Navbar with Home, Destinations and Day navigation -->
-<div class="navbar">
-  <div class="nav-container">
-    <div class="nav-links">
-      <a href="home.html">Home</a>
-      <a href="destinations.html">Destinations</a>
-    </div>
-    <div class="day-buttons">
-      <button onclick="showDay(1)">Day 1</button>
-      <button onclick="showDay(2)">Day 2</button>
-      <button onclick="showDay(3)">Day 3</button>
-      <button onclick="showDay(4)">Day 4</button>
-      <button onclick="showDay(5)">Day 5</button>
-      <button onclick="showDay(6)">Day 6</button>
-      <button onclick="showDay(7)">Day 7</button>
-    </div>
-  </div>
-</div>
+<nav class="day-nav">
+  <button onclick="showDay(1)">Day 1</button>
+  <button onclick="showDay(2)">Day 2</button>
+  <button onclick="showDay(3)">Day 3</button>
+  <button onclick="showDay(4)">Day 4</button>
+  <button onclick="showDay(5)">Day 5</button>
+  <button onclick="showDay(6)">Day 6</button>
+  <button onclick="showDay(7)">Day 7</button>
+<button><a href="place.html">Destinations</a> </button>
+ <button><a href="home.html">Home</a> </button>
+  
+  
+</nav>
 
 <div class="container">
+
   <!-- DAY 1 -->
   <div class="day" id="day1">
     <h2>Day 1: Departure from Bhimavaram to Chennai</h2>
